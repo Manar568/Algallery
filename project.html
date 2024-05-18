@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="project.css">
+    <title>project</title>
+  </head>
+  <body>
+
+    <header>
+      <div><a href="project2.html"> <img src="photo/R.jpg" height="45px" width="70" alt=""> </a></div>
+    <div>
+      <ul>
+        <li> <a href="#">Home</a></li>
+        <li> <a href="#">Missions</a></li>
+        <li> <a href="#">Galleries</a></li>
+        <li> <a href="#">About</a></li>
+        <li> <a href="#">Contact</a></li>
+      </ul>
+    </div>
+    </header>
+    <section class="main">
+      <img src="photo/stars1.jpg" id="star">
+      <h2 class="nouvil">stars</h2>
+      <img src="photo/moon2.jpg" id="moon">
+      <img src="photo/mountains3.jpg" id="mount1">
+      <img src="photo/mountains4.jpg" id="mount2">
+      <img src="photo/river5.jpg" id="river">
+      <img src="photo/boat6.jpg" id="boat">
+      <img src="photo/mountains7.jpg" id="mount3">
+    </section>
+    <div class="content">
+      <h2>Stars</h2>
+    <p>Stars are the most widely recognizessd astronomical objects, and represent the most fundamental building blocks of galaxies. The age, distribution, and composition of the stars in a galaxy trace the history, dynamics, and evolution of that galaxy. Moreover, stars are responsible for the manufacture and distribution of heavy elements such as carbon, nitrogen, and oxygen, and their characteristics are intimately tied to the characteristics of the planetary systems that may coalesce about them. Consequently, the study of the birth, life, and death of stars is central to the field of astronomy.</p> <br>
+    <p>A star the size of our Sun requires about 50 million years to mature from the beginning of the collapse to adulthood. Our Sun will stay in this mature phase (on the main sequence as shown in the Hertzsprung-Russell Diagram) for approximately 10 billion years.
+
+Stars are fueled by the nuclear fusion of hydrogen to form helium deep in their interiors. The outflow of energy from the central regions of the star provides the pressure necessary to keep the star from collapsing under its own weight, and the energy by which it shines.
+</p> <br>
+<p>On the other hand, the most massive stars, known as hypergiants, may be 100 or more times more massive than the Sun, and have surface temperatures of more than 30,000 K. Hypergiants emit hundreds of thousands of times more energy than the Sun, but have lifetimes of only a few million years. Although extreme stars such as these are believed to have been common in the early Universe, today they are extremely rare - the entire Milky Way galaxy contains only a handful of hypergiants.</p> <br>
+    </div>
+
+<script type="text/javascript">
+
+let stars = document.getElementById('star');
+let moon = document.getElementById('moon');
+let mount1 = document.getElementById('mount1');
+let mount2 = document.getElementById('mount2');
+let river = document.getElementById('river');
+let boat = document.getElementById('boat');
+let nouvil = document.querySelector('.nouvil');
+window.onscroll=function() {
+let value = scrollY;
+stars.style.left = value + 'px';
+moon.style.top = value * 3 + 'px';
+mount1.style.top = value * 2 + 'px';
+mount2.style.top = value * 1.5 + 'px';
+river.style.top = value + 'px';
+boat.style.top = value + 'px';
+boat.style.left = value * 3 + 'px';
+nouvil.style.fontSize = value + 'px';
+if(scrollY >= 67){
+  nouvil.style.fontSize = 67 + 'px';
+  nouvil.style.position = "fixed" ;
+  if(scrollY >= 430){
+    nouvil.style.display=  'none';
+  }
+else{
+  nouvil.style.display=  'block';
+
+}
+}
+
+if(scrollY >= 127 ){
+  document.querySelector('.main').style.background = 'linear-gradient(#5B8FB9,#7286D3)' ;
+}
+else{
+  document.querySelector('.main').style.background = 'linear-gradient(#200016,#10001f)'
+
+}
+
+
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
